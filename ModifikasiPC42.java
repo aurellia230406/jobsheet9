@@ -1,9 +1,9 @@
 import java.util.Scanner;
-public class ModifikasiPC41 {
+public class ModifikasiPC42 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int jumlahSiswa = 0;
-        System.out.print("Masukkan jumlah siswa : ");
+        System.out.print("Masukkan jumah siswa : ");
         jumlahSiswa = input.nextInt();
 
         int[] arrayNilai = new int[jumlahSiswa];
@@ -12,16 +12,23 @@ public class ModifikasiPC41 {
             arrayNilai[i] = input.nextInt();
         }
         int key, hasil = 0;
-        System.out.println("Berapa nilai yang dicari : ");
+        System.out.print("Berapa nilai yang dicari : ");
         key = input.nextInt();
         for (int i = 0; i < arrayNilai.length; i++) {
             if (key == arrayNilai[i]) {
                 hasil = i;
                 break;
+            } else {
+                hasil = arrayNilai.length + 1;
             }
         }
         System.out.println();
-        System.out.println("Nilai " + key + " ketemu di indeks ke-" + hasil);
+        if (hasil == arrayNilai.length + 1) {
+            System.out.println("Key " + key + " Tidak ditemukan");
+
+        } else {
+            System.out.println("Nilai " + key + " ketemu di indeks ke-" + hasil);
+        }
         System.out.println();
         input.close();
     }

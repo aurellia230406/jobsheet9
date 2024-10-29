@@ -21,5 +21,6 @@ public class ArrayRataNilai03 {
         rataNilai = total / jumlahSiswa;
         System.out.println("Rata-rata nilai mahasiswa adalah : " + rataNilai);
         System.out.println("Jumlah mahasiswa yang lulus : " + siswalulus);
+        input.close();
     }
 }
